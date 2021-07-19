@@ -1,5 +1,5 @@
 # Godot-6DOF-Vehicle-Demo
-Demo using Godot Generic 6DOF joints to make a fully working, physics based vehicle.
+Demo using [Godot Engine](https://godotengine.org/) [Generic 6DOF joints](https://docs.godotengine.org/en/stable/classes/class_generic6dofjoint.html) to make a fully working, physics based vehicle.
 
 The physics and joints setup is exactly the same I use on my racing game [TrackMaster: Free-For-All Motorsport](https://store.steampowered.com/app/1536740/TrackMaster_FreeForAll_Motorsport/).
 

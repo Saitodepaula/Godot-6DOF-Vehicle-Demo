@@ -11,7 +11,7 @@ Every time I've posted videos of TrackMaster's updates, I always received questi
 
 Seeing how there is little to no educational resources (tutorials) on 6DOF joints in Godot, I decided it was time to make a small contribution to the Godot community, and this is also a way to say "thank you" to this ever growing and awesome community.
 
-This demo contains:
+## This demo contains:
 
 1. A main scene, with obstacles and ramps, as static bodies.
 2. A working, physics based, monster truck like vehicle, based on 6DOF joints, with the script that make it works.

@@ -1,0 +1,320 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://Textures/Chessboard.png" type="Texture" id=1]
+[ext_resource path="res://Scenes/DemoStatic.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/DemoRigid.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scripts/Main.gd" type="Script" id=4]
+[ext_resource path="res://Scenes/VehicleDemo.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scripts/Camera02.gd" type="Script" id=6]
+
+[sub_resource type="SpatialMaterial" id=1]
+albedo_texture = ExtResource( 1 )
+uv1_scale = Vector3( 0.25, 1, 0.25 )
+uv1_triplanar = true
+
+[sub_resource type="CubeMesh" id=2]
+size = Vector3( 100, 2, 100 )
+
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 50, 1, 50 )
+
+[sub_resource type="CubeMesh" id=4]
+size = Vector3( 100, 2, 2 )
+
+[sub_resource type="BoxShape" id=5]
+extents = Vector3( 50, 1, 1 )
+
+[sub_resource type="CubeMesh" id=6]
+size = Vector3( 6, 10, 2 )
+
+[sub_resource type="BoxShape" id=7]
+extents = Vector3( 3, 5, 1 )
+
+[sub_resource type="ConcavePolygonShape" id=8]
+data = PoolVector3Array( 0, 1, 0, 0, 1, 0, 0, 0.809, 0.5878, 0, 1, 0, 0.509, 0.809, 0.2939, 0, 0.809, 0.5878, 0, 1, 0, 0, 1, 0, 0.509, 0.809, 0.2939, 0, 1, 0, 0.509, 0.809, -0.2939, 0.509, 0.809, 0.2939, 0, 1, 0, 0, 1, 0, 0.509, 0.809, -0.2939, 0, 1, 0, 0, 0.809, -0.5878, 0.509, 0.809, -0.2939, 0, 1, 0, 0, 1, 0, 0, 0.809, -0.5878, 0, 1, 0, -0.509, 0.809, -0.2939, 0, 0.809, -0.5878, 0, 1, 0, 0, 1, 0, -0.509, 0.809, -0.2939, 0, 1, 0, -0.509, 0.809, 0.2939, -0.509, 0.809, -0.2939, 0, 1, 0, 0, 1, 0, -0.509, 0.809, 0.2939, 0, 1, 0, 0, 0.809, 0.5878, -0.509, 0.809, 0.2939, 0, 0.809, 0.5878, 0.509, 0.809, 0.2939, 0, 0.309, 0.9511, 0.509, 0.809, 0.2939, 0.8236, 0.309, 0.4755, 0, 0.309, 0.9511, 0.509, 0.809, 0.2939, 0.509, 0.809, -0.2939, 0.8236, 0.309, 0.4755, 0.509, 0.809, -0.2939, 0.8236, 0.309, -0.4755, 0.8236, 0.309, 0.4755, 0.509, 0.809, -0.2939, 0, 0.809, -0.5878, 0.8236, 0.309, -0.4755, 0, 0.809, -0.5878, 0, 0.309, -0.9511, 0.8236, 0.309, -0.4755, 0, 0.809, -0.5878, -0.509, 0.809, -0.2939, 0, 0.309, -0.9511, -0.509, 0.809, -0.2939, -0.8236, 0.309, -0.4755, 0, 0.309, -0.9511, -0.509, 0.809, -0.2939, -0.509, 0.809, 0.2939, -0.8236, 0.309, -0.4755, -0.509, 0.809, 0.2939, -0.8236, 0.309, 0.4755, -0.8236, 0.309, -0.4755, -0.509, 0.809, 0.2939, 0, 0.809, 0.5878, -0.8236, 0.309, 0.4755, 0, 0.809, 0.5878, 0, 0.309, 0.9511, -0.8236, 0.309, 0.4755, 0, 0.309, 0.9511, 0.8236, 0.309, 0.4755, 0, -0.309, 0.9511, 0.8236, 0.309, 0.4755, 0.8236, -0.309, 0.4755, 0, -0.309, 0.9511, 0.8236, 0.309, 0.4755, 0.8236, 0.309, -0.4755, 0.8236, -0.309, 0.4755, 0.8236, 0.309, -0.4755, 0.8236, -0.309, -0.4755, 0.8236, -0.309, 0.4755, 0.8236, 0.309, -0.4755, 0, 0.309, -0.9511, 0.8236, -0.309, -0.4755, 0, 0.309, -0.9511, 0, -0.309, -0.9511, 0.8236, -0.309, -0.4755, 0, 0.309, -0.9511, -0.8236, 0.309, -0.4755, 0, -0.309, -0.9511, -0.8236, 0.309, -0.4755, -0.8236, -0.309, -0.4755, 0, -0.309, -0.9511, -0.8236, 0.309, -0.4755, -0.8236, 0.309, 0.4755, -0.8236, -0.309, -0.4755, -0.8236, 0.309, 0.4755, -0.8236, -0.309, 0.4755, -0.8236, -0.309, -0.4755, -0.8236, 0.309, 0.4755, 0, 0.309, 0.9511, -0.8236, -0.309, 0.4755, 0, 0.309, 0.9511, 0, -0.309, 0.9511, -0.8236, -0.309, 0.4755, 0, -0.309, 0.9511, 0.8236, -0.309, 0.4755, 0, -0.809, 0.5878, 0.8236, -0.309, 0.4755, 0.509, -0.809, 0.2939, 0, -0.809, 0.5878, 0.8236, -0.309, 0.4755, 0.8236, -0.309, -0.4755, 0.509, -0.809, 0.2939, 0.8236, -0.309, -0.4755, 0.509, -0.809, -0.2939, 0.509, -0.809, 0.2939, 0.8236, -0.309, -0.4755, 0, -0.309, -0.9511, 0.509, -0.809, -0.2939, 0, -0.309, -0.9511, 0, -0.809, -0.5878, 0.509, -0.809, -0.2939, 0, -0.309, -0.9511, -0.8236, -0.309, -0.4755, 0, -0.809, -0.5878, -0.8236, -0.309, -0.4755, -0.509, -0.809, -0.2939, 0, -0.809, -0.5878, -0.8236, -0.309, -0.4755, -0.8236, -0.309, 0.4755, -0.509, -0.809, -0.2939, -0.8236, -0.309, 0.4755, -0.509, -0.809, 0.2939, -0.509, -0.809, -0.2939, -0.8236, -0.309, 0.4755, 0, -0.309, 0.9511, -0.509, -0.809, 0.2939, 0, -0.309, 0.9511, 0, -0.809, 0.5878, -0.509, -0.809, 0.2939, 0, -0.809, 0.5878, 0.509, -0.809, 0.2939, 0, -1, 0, 0.509, -0.809, 0.2939, 0, -1, 0, 0, -1, 0, 0.509, -0.809, 0.2939, 0.509, -0.809, -0.2939, 0, -1, 0, 0.509, -0.809, -0.2939, 0, -1, 0, 0, -1, 0, 0.509, -0.809, -0.2939, 0, -0.809, -0.5878, 0, -1, 0, 0, -0.809, -0.5878, 0, -1, 0, 0, -1, 0, 0, -0.809, -0.5878, -0.509, -0.809, -0.2939, 0, -1, 0, -0.509, -0.809, -0.2939, 0, -1, 0, 0, -1, 0, -0.509, -0.809, -0.2939, -0.509, -0.809, 0.2939, 0, -1, 0, -0.509, -0.809, 0.2939, 0, -1, 0, 0, -1, 0, -0.509, -0.809, 0.2939, 0, -0.809, 0.5878, 0, -1, 0, 0, -0.809, 0.5878, 0, -1, 0, 0, -1, 0 )
+
+[sub_resource type="SphereMesh" id=9]
+radial_segments = 6
+rings = 4
+
+[node name="Main" type="Spatial"]
+script = ExtResource( 4 )
+
+[node name="Panel" type="Panel" parent="."]
+anchor_right = 0.25
+anchor_bottom = 0.1
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.02
+anchor_top = 0.02
+anchor_right = 0.1
+anchor_bottom = 0.05
+margin_right = 40.0
+margin_bottom = 14.0
+text = "TAB - CHANGE CAMERA
+VEHICLE CONTROLS:
+W, A, S, D - MOVE
+SPACE - HANDBRAKE
+Q, E - REAR STEER"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 0.80719, -0.348479, 0.476452, 0, 0.807147, 0.59035, -0.590291, -0.476525, 0.651521, 7.82933, 32.7311, 12.4689 )
+light_bake_mode = 0
+shadow_enabled = true
+shadow_color = Color( 0.466667, 0.466667, 0.466667, 1 )
+shadow_contact = 1.0
+directional_shadow_max_distance = 200.0
+
+[node name="Camera01" type="Camera" parent="."]
+transform = Transform( 0.694771, 0.325013, -0.641607, 0, 0.892074, 0.45189, 0.719231, -0.31396, 0.619787, -34.2101, 4.92197, -28.959 )
+
+[node name="Camera02" type="Camera" parent="."]
+transform = Transform( -0.00462204, 0.748072, -0.663602, -0.00410001, 0.663589, 0.748086, 0.999981, 0.00617846, -3.22106e-08, -54.8624, 32.6434, -0.217182 )
+current = true
+far = 500.0
+script = ExtResource( 6 )
+VehiclePath = NodePath("../VehicleDemo")
+
+[node name="FloorBody" type="StaticBody" parent="."]
+
+[node name="Floor" type="MeshInstance" parent="FloorBody"]
+material_override = SubResource( 1 )
+mesh = SubResource( 2 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="FloorBody"]
+shape = SubResource( 3 )
+
+[node name="Walls" type="Spatial" parent="."]
+
+[node name="Wall01" type="StaticBody" parent="Walls"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -50 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Walls/Wall01"]
+mesh = SubResource( 4 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="Walls/Wall01"]
+shape = SubResource( 5 )
+
+[node name="Wall02" type="StaticBody" parent="Walls"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 50 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Walls/Wall02"]
+mesh = SubResource( 4 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="Walls/Wall02"]
+shape = SubResource( 5 )
+
+[node name="Wall03" type="StaticBody" parent="Walls"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 50, 2, 0 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Walls/Wall03"]
+mesh = SubResource( 4 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="Walls/Wall03"]
+shape = SubResource( 5 )
+
+[node name="Wall04" type="StaticBody" parent="Walls"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -50, 2, 0 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Walls/Wall04"]
+mesh = SubResource( 4 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="Walls/Wall04"]
+shape = SubResource( 5 )
+
+[node name="Ramps&Obstacles" type="Spatial" parent="."]
+
+[node name="Ramps" type="Spatial" parent="Ramps&Obstacles"]
+
+[node name="Ramp" type="StaticBody" parent="Ramps&Obstacles/Ramps"]
+transform = Transform( -1, 2.88925e-07, -1.50648e-07, 0, 0.462337, 0.886705, 3.25841e-07, 0.886705, -0.462337, 0, 2.31028, -1.25783 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Ramps&Obstacles/Ramps/Ramp"]
+transform = Transform( 1, 0, -2.84217e-14, 0, 1, 8.9407e-08, -2.84217e-14, -8.9407e-08, 1, 0, 0, 0 )
+mesh = SubResource( 6 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="Ramps&Obstacles/Ramps/Ramp"]
+transform = Transform( 1, 0, -1.42109e-14, 0, 1, 5.96046e-08, -1.42109e-14, -5.96046e-08, 1, 0, 0, 0 )
+shape = SubResource( 7 )
+
+[node name="Ramp2" type="StaticBody" parent="Ramps&Obstacles/Ramps"]
+transform = Transform( -1, 2.8801e-07, -1.5239e-07, 0, 0.467683, 0.883896, 3.25841e-07, 0.883896, -0.467683, -28.9568, 2.32264, 3.20437 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Ramps&Obstacles/Ramps/Ramp2"]
+transform = Transform( 1, 0, 0, 0, 1, 4.76837e-08, 0, -4.76837e-08, 1, 0, 0, 0 )
+mesh = SubResource( 6 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="Ramps&Obstacles/Ramps/Ramp2"]
+transform = Transform( 1, 0, 0, 0, 1, 4.76837e-08, 0, -4.76837e-08, 1, 0, 0, 0 )
+shape = SubResource( 7 )
+
+[node name="Ramp3" type="StaticBody" parent="Ramps&Obstacles/Ramps"]
+transform = Transform( -1, 0, -3.25841e-07, 0, 1, 0, 3.25841e-07, 0, -1, -28.957, 5, 7.53889 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Ramps&Obstacles/Ramps/Ramp3"]
+transform = Transform( 1, 0, 0, 0, 1, 4.76838e-08, 0, -4.76838e-08, 1, 0, 0, 0 )
+mesh = SubResource( 6 )
+material/0 = null
+
+[node name="CollisionShape" type="CollisionShape" parent="Ramps&Obstacles/Ramps/Ramp3"]
+transform = Transform( 1, 0, 0, 0, 1, 4.76838e-08, 0, -4.76838e-08, 1, 0, 0, 0 )
+shape = SubResource( 7 )
+
+[node name="Boulders" type="Spatial" parent="Ramps&Obstacles"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.684936, 0 )
+
+[node name="Boulder" type="RigidBody" parent="Ramps&Obstacles/Boulders"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -29.2766, 0.262207, 34.8109 )
+mode = 1
+
+[node name="CollisionShape" type="CollisionShape" parent="Ramps&Obstacles/Boulders/Boulder"]
+shape = SubResource( 8 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Ramps&Obstacles/Boulders/Boulder"]
+mesh = SubResource( 9 )
+material/0 = null
+
+[node name="Boulder2" type="RigidBody" parent="Ramps&Obstacles/Boulders"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -26.1775, 0.262207, 34.8109 )
+mode = 1
+
+[node name="CollisionShape" type="CollisionShape" parent="Ramps&Obstacles/Boulders/Boulder2"]
+shape = SubResource( 8 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Ramps&Obstacles/Boulders/Boulder2"]
+mesh = SubResource( 9 )
+material/0 = null
+
+[node name="Boulder8" type="RigidBody" parent="Ramps&Obstacles/Boulders"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -25.1836, 0.262207, 30.1771 )
+mode = 1
+
+[node name="CollisionShape" type="CollisionShape" parent="Ramps&Obstacles/Boulders/Boulder8"]
+shape = SubResource( 8 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Ramps&Obstacles/Boulders/Boulder8"]
+mesh = SubResource( 9 )
+material/0 = null
+
+[node name="Boulder3" type="RigidBody" parent="Ramps&Obstacles/Boulders"]
+transform = Transform( 1.21558, 0, 0, 0, 1.30322, 0, 0, 0, 1.35303, -28.0161, 0.262207, 38.2377 )
+mode = 1
+
+[node name="CollisionShape" type="CollisionShape" parent="Ramps&Obstacles/Boulders/Boulder3"]
+shape = SubResource( 8 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Ramps&Obstacles/Boulders/Boulder3"]
+mesh = SubResource( 9 )
+material/0 = null
+
+[node name="Boulder5" type="RigidBody" parent="Ramps&Obstacles/Boulders"]
+transform = Transform( 1.21558, 0, 0, 0, 1.30322, 0, 0, 0, 1.35303, -29.9756, 0.262207, 31.4557 )
+mode = 1
+
+[node name="CollisionShape" type="CollisionShape" parent="Ramps&Obstacles/Boulders/Boulder5"]
+shape = SubResource( 8 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Ramps&Obstacles/Boulders/Boulder5"]
+mesh = SubResource( 9 )
+material/0 = null
+
+[node name="Boulder4" type="RigidBody" parent="Ramps&Obstacles/Boulders"]
+transform = Transform( 1.75, 0, 0, 0, 1.4043, 0, 0, 0, 1.88428, -22.3311, 0.262207, 38.2377 )
+mode = 1
+
+[node name="CollisionShape" type="CollisionShape" parent="Ramps&Obstacles/Boulders/Boulder4"]
+shape = SubResource( 8 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Ramps&Obstacles/Boulders/Boulder4"]
+mesh = SubResource( 9 )
+material/0 = null
+
+[node name="Boulder6" type="RigidBody" parent="Ramps&Obstacles/Boulders"]
+transform = Transform( 1.75, 0, 0, 0, 1.4043, 0, 0, 0, 1.88428, -32.658, 0.262207, 34.5638 )
+mode = 1
+
+[node name="CollisionShape" type="CollisionShape" parent="Ramps&Obstacles/Boulders/Boulder6"]
+shape = SubResource( 8 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Ramps&Obstacles/Boulders/Boulder6"]
+mesh = SubResource( 9 )
+material/0 = null
+
+[node name="Boulder11" type="RigidBody" parent="Ramps&Obstacles/Boulders"]
+transform = Transform( 1.75, 0, 0, 0, 1.4043, 0, 0, 0, 1.88428, -26.1792, 0.262207, 40.6781 )
+mode = 1
+
+[node name="CollisionShape" type="CollisionShape" parent="Ramps&Obstacles/Boulders/Boulder11"]
+shape = SubResource( 8 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Ramps&Obstacles/Boulders/Boulder11"]
+mesh = SubResource( 9 )
+material/0 = null
+
+[node name="Boulder9" type="RigidBody" parent="Ramps&Obstacles/Boulders"]
+transform = Transform( 2.9762, 0, 0, 0, 2.25558, 0, 0, 0, 2.84298, -22.1816, 0.262207, 33.2504 )
+mode = 1
+
+[node name="CollisionShape" type="CollisionShape" parent="Ramps&Obstacles/Boulders/Boulder9"]
+shape = SubResource( 8 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Ramps&Obstacles/Boulders/Boulder9"]
+mesh = SubResource( 9 )
+material/0 = null
+
+[node name="Boulder12" type="RigidBody" parent="Ramps&Obstacles/Boulders"]
+transform = Transform( 3.984, 0, 0, 0, 3.28205, 0, 0, 0, 2.84298, -32.731, 0.262207, 39.0692 )
+mode = 1
+
+[node name="CollisionShape" type="CollisionShape" parent="Ramps&Obstacles/Boulders/Boulder12"]
+shape = SubResource( 8 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Ramps&Obstacles/Boulders/Boulder12"]
+mesh = SubResource( 9 )
+material/0 = null
+
+[node name="Boulder10" type="RigidBody" parent="Ramps&Obstacles/Boulders"]
+transform = Transform( 2.9762, 0, 0, 0, 2.25558, 0, 0, 0, 2.84298, -34.2253, 0.262207, 30.4689 )
+mode = 1
+
+[node name="CollisionShape" type="CollisionShape" parent="Ramps&Obstacles/Boulders/Boulder10"]
+shape = SubResource( 8 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Ramps&Obstacles/Boulders/Boulder10"]
+mesh = SubResource( 9 )
+material/0 = null
+
+[node name="Boulder7" type="RigidBody" parent="Ramps&Obstacles/Boulders"]
+transform = Transform( 1.75, 0, 0, 0, 1.4043, 0, 0, 0, 1.88428, -28.0425, 0.262207, 28.7338 )
+mode = 1
+
+[node name="CollisionShape" type="CollisionShape" parent="Ramps&Obstacles/Boulders/Boulder7"]
+shape = SubResource( 8 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Ramps&Obstacles/Boulders/Boulder7"]
+mesh = SubResource( 9 )
+material/0 = null
+
+[node name="DemoStatic" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -28.549, 3.5, -31.932 )
+
+[node name="DemoRigid" parent="." instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -31.1287, 3.5, -36.7713 )
+
+[node name="VehicleDemo" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.72812, -37.5431 )

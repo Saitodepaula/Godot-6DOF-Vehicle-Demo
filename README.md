@@ -19,3 +19,5 @@ Use this demo the way you like it, it's completely free.
 **WARNING: As of July 2021, this demo only works with Bullet physics.**
 
 I may update this demo in the future. Please, share your opinion, feedback and request for more features.
+
+I also may make a video tutorial in the future, explaining every detail.

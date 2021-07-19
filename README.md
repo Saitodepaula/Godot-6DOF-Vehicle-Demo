@@ -5,6 +5,8 @@ The physics and joints setup is exactly the same I use on my racing game [TrackM
 
 ![Image01](https://user-images.githubusercontent.com/22160489/126226334-b6faa219-2bda-4ddc-a1d0-f487e53b51aa.JPG)
 
+After 1.5 year of development of TrackMaster, I decided to make a free and open source demo of the basics of how the game vehicles works. Every time I've posted videos of TrackMaster's updates, I always received questions about how I made the physics, and how I use joints. Seeing how there is little to no educational resources (tutorials) on 6DOF joints in Godot, I decided it was time to make a small contribution to the Godot community, and this is also a way to say "thank you" to this ever growing and awesome community.
+
 This demo contains:
 
 1. A main scene, with obstacles and ramps, as static bodies.

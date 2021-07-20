@@ -20,12 +20,29 @@ Seeing how there is little to no educational resources (tutorials) on 6DOF joint
 3. The blend file used for the vehicle visual instance (mesh).
 4. Two additional scenes, with no scripts, showing the very basics of 6DOF joints.
 
-Physics run on 240 FPS.
+## Main Features
 
-Use this demo the way you like it, it's completely free.
+1. Use this demo the way you like it, it's completely free.
+2. Completely physics and joints based, no raycast suspension or other methods (not that it's better or not, just a different approach). This means torque is added to the wheels and the spinning of the wheel makes the vehicle move.
+3. Body and wheels are regular rigid bodies. This has the advantage of the vehicle behaving in a completely free way, with no physical constrains: it can roll, topple and react to any other static or rigid body.
+4. Eventual moving parts you may want to add, like doors and bumpers, can be added in the same way, with rigid bodies and 6DOF joints.
+5. The physics behaviour (suspension travel, acceleration, top speed) needs no code. They are all 6DOF joints parameters set in the editor. In the demo, I set acceleration and top speeed inside the code for convenience, but it doesn't need to be this way.
+6. Script is only needed for input, to control the vehicle.
+7. Inputs are custom actions, defined in the INPUT MAP (PROJECT SETTINGS).
+8. Physics run on 240 FPS, for stability reasons. Sincerely, in this demo there would be no difference to run with 60 or other physics FPS, but if you want to try bigger tracks/maps/environments, it can be an issue. More on this topic on DISADVANTAGES, below.
+
+## Disadvantages
 
 **WARNING: As of July 2021, this demo only works with Bullet physics.**
 
-I may update this demo in the future. Please, share your opinion, feedback and request for more features.
+1. The advantage of being completely physics based can also be a disadvantage, depending of what you want to achieve. This setup is subject to suffer from the following bugs/issues: 
+https://github.com/godotengine/godot/issues/46596
+https://github.com/godotengine/godot/issues/50463
+https://github.com/godotengine/godot/issues/36729
+2. Since Bullet will be an official plugin in Godot 4, and the default physics engine will be Godot Physics, you may also think if you want to use a setup like this.
+
+## Future Updates
+
+I can't guarantee future upodates. That said, I may update this demo in the future. Please, share your opinion, feedback and request for more features.
 
 I also may make a video tutorial in the future, explaining every detail.

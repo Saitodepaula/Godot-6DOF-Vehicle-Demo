@@ -36,9 +36,13 @@ Seeing how there is little to no educational resources (tutorials) on 6DOF joint
 **WARNING: As of July 2021, this demo only works with Bullet physics.**
 
 1. The advantage of being completely physics based can also be a disadvantage, depending of what you want to achieve. This setup is subject to suffer from the following bugs/issues: 
+
 https://github.com/godotengine/godot/issues/46596
+
 https://github.com/godotengine/godot/issues/50463
+
 https://github.com/godotengine/godot/issues/36729
+
 2. Since Bullet will be an official plugin in Godot 4, and the default physics engine will be Godot Physics, you may also think if you want to use a setup like this.
 
 ## Future Updates

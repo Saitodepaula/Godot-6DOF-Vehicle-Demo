@@ -35,7 +35,7 @@ Seeing how there is little to no educational resources (tutorials) on 6DOF joint
 
 **WARNING: As of July 2021, this demo only works with Bullet physics.**
 
-1. The advantage of being completely physics based can also be a disadvantage, depending of what you want to achieve. This setup is subject to suffer from the following bugs/issues: 
+1. The advantage of being completely physics based can also be a disadvantage, depending on what you want to achieve. This setup is subject to suffer from the following bugs/issues: 
 
 https://github.com/godotengine/godot/issues/46596
 

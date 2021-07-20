@@ -43,6 +43,6 @@ https://github.com/godotengine/godot/issues/36729
 
 ## Future Updates
 
-I can't guarantee future upodates. That said, I may update this demo in the future. Please, share your opinion, feedback and request for more features.
+I can't guarantee future updates. That said, I may update this demo in the future. Please, share your opinion, feedback and request for more features.
 
 I also may make a video tutorial in the future, explaining every detail.

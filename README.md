@@ -45,6 +45,7 @@ https://github.com/godotengine/godot/issues/50463
 https://github.com/godotengine/godot/issues/36729
 
 2. Since Bullet will be an official plugin in Godot 4, and the default physics engine will be Godot Physics, you may also think if you want to use a setup like this.
+3. As of July 2021, I've tried to make a 6DOF setup in Godot 4, and couldn't even assign two bodies to the joint in the editor.
 
 ## Future Updates
 

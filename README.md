@@ -53,3 +53,41 @@ https://github.com/godotengine/godot/issues/36729
 I can't guarantee future updates. That said, I may update this demo in the future. Please, share your opinion, feedback and request for more features.
 
 I also may make a video tutorial in the future, explaining every detail.
+
+## Other Approaches
+
+Since the idea is to share and spread knowledge, there is no reason for me not to mention other vehicle physics approaches in Godot. Here is just a brief list of things I've found interesting around the internet.
+
+GDSIM by Wolfe
+
+https://www.gtplanet.net/forum/threads/gdsim-v0-3a-launch-sim-workshop-devlog.396400/
+https://www.youtube.com/watch?v=aqUTh39nGSM&list=LL&index=10
+
+Godot Engine - Advanced Vehicle Physics by Thales Kruger Games
+
+https://www.youtube.com/watch?v=PZjpnn9Jmow&list=LL&index=9&t=391s
+https://sabudum.gumroad.com/l/PsTbK
+
+Tobalation/GDCustomRaycastVehicle
+
+https://github.com/Tobalation/GDCustomRaycastVehicle
+
+Voxel based game by soloCodeNet 
+
+https://www.reddit.com/r/godot/comments/oz2358/all_voxel_based_game/
+
+Sphere base physics by KenNL
+
+https://www.reddit.com/r/godot/comments/oyh3vb/ive_been_learning_godot_for_a_week_or_two_now_and/
+
+Simple 3D Car Physics using RigidBody and Raycasts by MikeLumos
+
+https://www.reddit.com/r/godot/comments/la2jxa/simple_3d_car_physics_using_rigidbody_and/
+https://godotacademy.gumroad.com/l/godot-racing/free%E2%80%8B
+
+Physics based hoverboard in Godot by MrEliptik
+
+https://github.com/MrEliptik/godot_experiments/tree/master/3D/hoverboard
+https://www.youtube.com/watch?v=6wUo0WWM4fg
+
+

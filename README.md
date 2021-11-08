@@ -39,6 +39,8 @@ Seeing how there is little to no educational resources (tutorials) on 6DOF joint
 
 1. The advantage of being completely physics based can also be a disadvantage, depending on what you want to achieve. This setup is subject to suffer from the following bugs/issues: 
 
+https://github.com/godotengine/godot/issues/54761
+
 https://github.com/godotengine/godot/issues/46596
 
 https://github.com/godotengine/godot/issues/50463
